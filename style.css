@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #1679ab;
+}
+
+#main {
+  width: 840px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px 35px 35px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+#main.disable :where(#editSection, .resetf, .save-img) {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+#main h1 {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+#container {
+  display: flex;
+  margin: 25px 0px;
+  min-height: 330px;
+}
+
+#editSection {
+  width: 300px;
+  padding: 15px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#editSection .title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+#editSection #btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#editSection #btns button {
+  width: calc(100% / 2 - 4px);
+  height: 45px;
+  font-size: 16px;
+  color: #6c757d;
+  margin-bottom: 8px;
+  outline: none;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#editSection #btns button:hover {
+  background-color: #f5f5f5;
+}
+
+#editSection #btns button.active {
+  background-color: #102c57;
+  color: #fff;
+}
+
+#editSection #slider {
+  margin-top: 12px;
+}
+
+#slider .filter_info {
+  display: flex;
+  justify-content: space-between;
+  color: #464646;
+  font-size: 15px;
+  width: 100%;
+}
+
+#slider input {
+  width: 100%;
+  height: 5px;
+  accent-color: #102c57;
+}
+
+#editSection #rotate button {
+  width: calc(100% / 4 - 3px);
+  font-size: 20px;
+  font-weight: 300;
+  padding: 8px;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  outline: none;
+}
+
+#editSection #rotate button:hover {
+  background-color: #f5f5f5;
+}
+
+#editSection #rotate {
+  margin-top: 15px;
+}
+
+#previewSection {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+  overflow: hidden;
+}
+
+#previewSection img {
+  width: 100%;
+  height: 100%;
+  max-width: 490px;
+  max-height: 330px;
+  object-fit: contain;
+}
+
+#controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#controls button {
+  padding: 10px 20px;
+  border-radius: 3px;
+  font-size: 15px;
+  cursor: pointer;
+  outline: none;
+  background-color: #fff;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#controls .resetf {
+  color: #6c757d;
+  border: 1px solid #6c757d;
+}
+
+#controls .choose-img {
+  background-color: #585c5f;
+  border: 1px solid #6c757d;
+}
+
+#controls .save-img {
+  background-color: #102c57;
+  border: none;
+  margin-left: 10px;
+}
+
+/* adding media queries to make responsive in the small devices */
+
+@media screen and (max-width: 760px) {
+  #main {
+    padding: 25px;
+    border-radius: 0px;
+  }
+  #main h1 {
+    text-align: center;
+  }
+  #container {
+    flex-wrap: wrap-reverse;
+  }
+  #container #editSection {
+    width: 100%;
+  }
+  #container #previewSection {
+    width: 100%;
+    margin: 0px 0px 15px;
+  }
+}
+
+/* adding media queries for extra small devices  */
+
+@media screen and (max-width: 500px) {
+  #controls button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  #main h1 {
+    text-align: center;
+  }
+  #controls #rows {
+    width: 100%;
+  }
+  #controls #rows .save-img {
+    margin-left: 0px;
+  }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="main" class="disable">
+        <h1>Easy Image Editor</h1>
+        <div id="container">
+
+            <!-- having all the features that would apply on image  -->
+            <div id="editSection">
+
+                <!-- html script to apply filters  on image-->
+                <div class="filters">
+                    <h2 class="title">Filters</h2>
+                    <div id="btns">
+                        <button class="active" id="brightness">Brightness</button>
+                        <button id="staturation">Staturation</button>
+                        <button id="inversion">Inversion</button>
+                        <button id="grayscale">Grayscale</button>
+                    </div>
+                    <div id="slider">
+                        <div class="filter_info">
+                            <p class="fname">Brigthness</p>
+                            <p class="fvalue">100%</p>
+                        </div>
+                        <input type="range" name="fvalue" value="100" min="0" max="200">
+                    </div>
+                </div>
+
+                <!-- html script to rotate an image  -->
+                <div id="rotate">
+                    <h2 class="title">Rotate & Flip</h2>
+                    <button id="left"><i class="ri-anticlockwise-line"></i></button >
+                    <button id="right"><i class="ri-clockwise-line"></i></button>
+                    <button id="horizontally"><i class="ri-flip-horizontal-line"></i></button>
+                    <button id="vertically"><i class="ri-flip-vertical-line"></i></button>
+                </div>
+            </div>
+
+            <div id="previewSection">
+                <img src="image-placeholder2.svg" alt="image-placeholder">
+            </div>
+        </div>
+
+        <div id="controls">
+            <button class="resetf">Reset Filters</button>
+            <div id="rows">
+                <input type="file" class="fileInput" accept="image/*" hidden>
+                <button class="choose-img">Choose Image</button>
+                <button class="save-img">Save Image</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
